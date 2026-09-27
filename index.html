@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>Task List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="main-content" aria-labelledby="page-title">
+        <h1 id="page-title">Tasks</h1>
+        <button
+          id="payment-demo-open"
+          class="payment-demo-button"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls="payment-dialog"
+        >
+          Try the €1 payment demo
+        </button>
+        <section class="task-entry" aria-labelledby="entry-title">
+          <h2 id="entry-title" class="section-title">Add a task</h2>
+          <form id="task-form" class="task-form">
+            <div class="field-group">
+              <label for="task-description">Task description</label>
+              <input
+                id="task-description"
+                name="description"
+                type="text"
+                placeholder="What needs doing?"
+                autocomplete="off"
+                aria-describedby="task-feedback"
+              >
+            </div>
+            <button class="add-button" type="submit">Add</button>
+          </form>
+          <p
+            id="task-feedback"
+            class="task-feedback"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          ></p>
+        </section>
+        <section class="task-list-section" aria-labelledby="task-list-heading">
+          <h2 id="task-list-heading" class="section-title">Tasks</h2>
+          <p id="empty-state" class="empty-state">No tasks yet.</p>
+          <ul id="task-list" class="task-list" aria-labelledby="task-list-heading"></ul>
+        </section>
+      </main>
+
+      <dialog
+        id="payment-dialog"
+        class="payment-dialog"
+        aria-labelledby="payment-dialog-title"
+        aria-describedby="payment-dialog-notice"
+      >
+        <div class="payment-dialog__content">
+          <div class="payment-dialog__topline" aria-hidden="true">
+            <span class="payment-dialog__mark">P</span>
+            <span class="payment-dialog__label">WALLET DEMO</span>
+          </div>
+          <p id="payment-dialog-notice" class="payment-dialog__notice">
+            Simulation only. No money will be charged.
+          </p>
+          <h2 id="payment-dialog-title" class="payment-dialog__title">Confirm demo payment</h2>
+          <p class="payment-dialog__description">This is a pretend payment interaction for fun.</p>
+          <p class="payment-dialog__amount-label">Demo amount</p>
+          <p class="payment-dialog__amount">€1.00</p>
+          <p
+            id="payment-status"
+            class="payment-dialog__status"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          ></p>
+          <div class="payment-dialog__actions">
+            <button id="payment-close" class="payment-dialog__close" type="button">Close</button>
+            <button id="payment-pay" class="payment-dialog__pay" type="button">Pay</button>
+          </div>
+        </div>
+      </dialog>
+
+      <footer class="page-footer">Tasks stay in this tab until you refresh.</footer>
+    </div>
+  </body>
+</html>
