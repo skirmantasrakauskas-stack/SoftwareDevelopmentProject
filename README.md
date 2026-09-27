@@ -38,7 +38,7 @@ processing and Google Pay API integration are explicitly out of scope.
 
 **Task list**
 
-![To-Do application with the task form and empty task list](screenshots/task-list.png)
+![To-Do application with the task form and example tasks](screenshots/task-list.png)
 
 **Simulated payment popup**
 
