@@ -34,6 +34,16 @@ This is only a simulated/meme payment interface. It does not charge real money, 
 credentials, communicate with Google Pay, or make external payment requests. Real payment
 processing and Google Pay API integration are explicitly out of scope.
 
+## Screenshots
+
+**Task list**
+
+![To-Do application with the task form and empty task list](screenshots/task-list.png)
+
+**Simulated payment popup**
+
+![Fictional €1.00 payment demo with a no-charge notice](screenshots/payment-demo.png)
+
 ## Project Files
 
 - `index.html` contains the task interface and payment demo dialog.
